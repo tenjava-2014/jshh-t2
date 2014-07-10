@@ -1,0 +1,3 @@
+name: jshh-t2
+main: com.tenjava.entries.jshh.t2.TenJava
+version: '${project.version}'
