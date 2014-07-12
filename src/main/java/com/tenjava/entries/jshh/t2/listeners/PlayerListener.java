@@ -13,6 +13,7 @@ public class PlayerListener implements Listener {
         PlayerListener.plugin = plugin;
     }
     
+    /* Send any user that joins a persuasive message telling them to come back! */
     @EventHandler
     public void onJoin(PlayerJoinEvent ev) {
         ev.getPlayer().sendMessage("Make sure you come back again!"); // Replay level increased by 500%!

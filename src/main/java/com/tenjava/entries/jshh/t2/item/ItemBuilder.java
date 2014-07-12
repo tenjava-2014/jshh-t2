@@ -11,6 +11,13 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 public class ItemBuilder {
 
+    /**
+     * Usage: new ItemBuilder(Material.DIRT, 1)
+     *            .addLore("Diiiirt!")
+     *            .setDisplayName("Almighty dirt")
+     *            .build();   
+     */
+    
     private Material material;
     private int amount;
     private final short data;
@@ -87,8 +94,8 @@ public class ItemBuilder {
 
     public ItemStack build() {
         Material material = this.material;
-        if (material == null) {
-            material = Material.STICK;
+        if (material == null) { // This will never be null, but for safety
+            material = Material.STICK; // The most useless piece of shit I could think of
             Log.warning("ItemBuilder -- Invalid material specified");
         }
         ItemStack item = new ItemStack(this.material, this.amount, this.data);
