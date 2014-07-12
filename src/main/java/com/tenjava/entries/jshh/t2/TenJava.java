@@ -12,8 +12,9 @@ public class TenJava extends JavaPlugin {
     @Override
     public void onEnable() {
         instance = this;
+        registerListeners();
+
         Log.setDebugging(true);
-        Log.log("Hello, World!");
     }
 
     @Override
@@ -21,11 +22,11 @@ public class TenJava extends JavaPlugin {
         instance = null;
     }
 
-    public void registerListeners() {
+    private void registerListeners() {
         PluginManager pm = getServer().getPluginManager();
         pm.registerEvents(new PlayerListener(this), this);
     }
-    
+
     public static TenJava get() {
         return instance;
     }

@@ -8,14 +8,14 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class PlayerListener implements Listener {
 
     private static JavaPlugin plugin;
-    
+
     public PlayerListener(JavaPlugin plugin) {
         PlayerListener.plugin = plugin;
     }
-    
+
     @EventHandler
     public void onJoin(PlayerJoinEvent ev) {
-        /* Do shit */
+
     }
-    
+
 }
