@@ -12,10 +12,10 @@ public class PlayerListener implements Listener {
     public PlayerListener(JavaPlugin plugin) {
         PlayerListener.plugin = plugin;
     }
-
+    
     @EventHandler
     public void onJoin(PlayerJoinEvent ev) {
-
+        ev.getPlayer().sendMessage("Make sure you come back again!"); // Replay level increased by 500%!
     }
 
 }
